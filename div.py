@@ -8,9 +8,15 @@ def div(a: int, b: int) -> Tuple[int, int]:
     - a % b
     """
 
-    d = 0  # d: the result a/b
-    m = 0  # m: the result a%b
+    d = 0
+    while a >= 0:
+        x = 0
+        while b << x <= a:
+            x += 1
+        x -= 1
+        if x < 0:
+            break
+        d += 1 << x
+        a -= b << x
 
-    # TO BE IMPLEMENTED
-
-    return d, m
+    return d, a
