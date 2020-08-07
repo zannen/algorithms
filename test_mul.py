@@ -1,5 +1,6 @@
 import mul
 
+
 def test_mulPeasant():
     for a, b in [
         (99, 0),
