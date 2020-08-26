@@ -13,9 +13,21 @@ def subtest(n: int) -> None:
 def test_sort_parallel():
     for n in [
         10000,
-        100000,
-        1000000,
-        10000000,
+        # 100000,
+        # 1000000,
+        # 10000000,
         # 100000000,
     ]:
         subtest(n)
+
+
+def test_merge_sorted_lists():
+    for lst1, lst2, expected in [
+        ([], [], []),
+        ([1], [], [1]),
+        ([], [2], [2]),
+        ([2], [1], [1, 2]),
+        ([1, 2, 3, 10], [3, 4, 7], [1, 2, 3, 3, 4, 7, 10]),
+    ]:
+        got = sp.merge_sorted_lists(lst1, lst2)
+        assert got == expected
