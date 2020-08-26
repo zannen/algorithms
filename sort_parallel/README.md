@@ -1,4 +1,15 @@
-Generating lists:
+# Sort Parallel
+
+Task: Write an algorithm which sorts a list of numbers using parallel processing.
+
+## Timings
+
+Here are some timings for a sample machine (AMD fx8250, 8 cores)
+
+### Timing list generation
+
+```
+python3 generate_list.py
 
    0.0092s, N=    10000,    0.0092s per 10k. generate unsorted list of random numbers
    0.0062s, N=    10000,    0.0062s per 10k. write unsorted list to file
@@ -24,8 +35,12 @@ Generating lists:
   67.3814s, N=100000000,    0.0067s per 10k. write unsorted list to file
  106.6602s, N=100000000,    0.0107s per 10k. sort list
   81.4213s, N=100000000,    0.0081s per 10k. write sorted list to file
+```
 
-Timing just the sort:
+### Timing just the sort
+
+```
+python3 time_sort_parallel.py
 
    0.0014s, N=    10000,    0.0014s per 10k. Sort internal
    0.0521s, N=    10000,    0.0521s per 10k. Sort parallel
@@ -41,3 +56,4 @@ Timing just the sort:
 
  108.7289s, N=100000000,    0.0109s per 10k. Sort internal
  170.4060s, N=100000000,    0.0170s per 10k. Sort parallel
+```
